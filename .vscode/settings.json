@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/0ac7e236-094b-4d5e-b90a-c73823ed0617/AppServices/subscriptions/0ac7e236-094b-4d5e-b90a-c73823ed0617/resourceGroups/fpolido/providers/Microsoft.Web/sites/sanitizehtmllogs2",
+    "appService.deploySubpath": "."
+}

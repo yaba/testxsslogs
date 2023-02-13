@@ -67,21 +67,13 @@ app.get('/', function (req, res) {
 
 app.get('/mymessage', function (req, res) {
 
-  console.log('HTML: <h1>Hello H1</h1> XSS: <script>alert("hello");</script> IFRAME: <iframe src="https://www.microsoft.com" title="Testing 123"></iframe>');
-  console.warn('HTML: <h1>Hello H1</h1> XSS: <script>alert("hello");</script> IFRAME: <iframe src="https://www.microsoft.com" title="Testing 123"></iframe>');
-  console.error('HTML: <h1>Hello H1</h1> XSS: <script>alert("hello");</script> IFRAME: <iframe src="https://www.microsoft.com" title="Testing 123"></iframe>');
-  console.info('HTML: <h1>Hello H1</h1> XSS: <script>alert("hello");</script> IFRAME: <iframe src="https://www.microsoft.com" title="Testing 123"></iframe>');
-  console.trace('HTML: <h1>Hello H1</h1> XSS: <script>alert("hello");</script> IFRAME: <iframe src="https://www.microsoft.com" title="Testing 123"></iframe>');
- 
-  logger.log('silly', "HTML: <h1>Hello H1</h1> XSS: <script>alert(\"hello\");</script> IFRAME: <iframe src=\"https://www.microsoft.com\" title=\"Testing 123\"></iframe>");
-  logger.log('debug', "HTML: <h1>Hello H1</h1> XSS: <script>alert(\"hello\");</script> IFRAME: <iframe src=\"https://www.microsoft.com\" title=\"Testing 123\"></iframe>");
-  logger.log('verbose', "HTML: <h1>Hello H1</h1> XSS: <script>alert(\"hello\");</script> IFRAME: <iframe src=\"https://www.microsoft.com\" title=\"Testing 123\"></iframe>");
-  logger.log('info', "HTML: <h1>Hello H1</h1> XSS: <script>alert(\"hello\");</script> IFRAME: <iframe src=\"https://www.microsoft.com\" title=\"Testing 123\"></iframe>");
-  logger.log('warn', "HTML: <h1>Hello H1</h1> XSS: <script>alert(\"hello\");</script> IFRAME: <iframe src=\"https://www.microsoft.com\" title=\"Testing 123\"></iframe>");
-  logger.log('error', "HTML: <h1>Hello H1</h1> XSS: <script>alert(\"hello\");</script> IFRAME: <iframe src=\"https://www.microsoft.com\" title=\"Testing 123\"></iframe>");
-  logger.info("HTML: <h1>Hello H1</h1> XSS: <script>alert(\"hello\");</script> IFRAME: <iframe src=\"https://www.microsoft.com\" title=\"Testing 123\"></iframe>");
-  logger.warn("HTML: <h1>Hello H1</h1> XSS: <script>alert(\"hello\");</script> IFRAME: <iframe src=\"https://www.microsoft.com\" title=\"Testing 123\"></iframe>");
-  logger.error("HTML: <h1>Hello H1</h1> XSS: <script>alert(\"hello\");</script> IFRAME: <iframe src=\"https://www.microsoft.com\" title=\"Testing 123\"></iframe>");
+  console.log('HTML: <h1>Hello H1</h1>');
+  console.log('JavaScript: <script>alert("hello");</script>');
+  console.log('IFRAME: <iframe src="https://www.microsoft.com" title="Testing 123"></iframe>');
+  console.log('VIDEO: <object data="https://www.youtube.com/embed/dQw4w9WgXcQ" height="300px" width="450" allowfullscreen></object>');
+  console.log('<img src="https://i.imgur.com/xlL74PA.jpeg" alt="testing123" width="400" height="400">');
+  console.log('IMAGE: <blockquote class="imgur-embed-pub" lang="en" data-id="a/8rx9MaG" data-context="false" ><a href="//imgur.com/a/8rx9MaG"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>');
+
   
 
   return res.send("Check your logs!!");
